@@ -47,6 +47,7 @@ import { useBebidasStore } from '@/stores/bebidas';
                     type="text"
                     class=" p-3 w-full rounded-lg focus:outline-none bg-white"
                     placeholder="Nombre o Ingredientes: ej. Vodka, Tequila, Etc"
+                    v-model="store.busqueda.nombre"
                     >
                 </div>
                 <div class="space-y-4">
@@ -54,7 +55,8 @@ import { useBebidasStore } from '@/stores/bebidas';
                     for="categoria">Categoría</label>
                     <select
                     id="categoria"
-                    class=" p-3 w-full rounded-lg focus:outline-none bg-white">
+                    class=" p-3 w-full rounded-lg focus:outline-none bg-white"
+                    v-model="store.busqueda.categoria">
                         <option value="">-- Seleccione --</option>
                         <option 
                         v-for="categoria in store.categorias"
