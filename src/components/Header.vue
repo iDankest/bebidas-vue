@@ -6,6 +6,10 @@ import { useBebidasStore } from '@/stores/bebidas';
     const route = useRoute()
     const store = useBebidasStore()
     const paginaInicio = computed(() => route.name === 'inicio')
+
+    const handleSubmit = () => {
+
+    }
 </script>
 
 <template>

@@ -14,8 +14,13 @@ export const  useBebidasStore = defineStore('bebidas', () => {
         const {data : {drinks}} = await axios('https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list')
         categorias.value = drinks
     })
+
+    function obternerRecetas() {
+
+    }
     return {
         categorias,
-        busqueda
+        busqueda,
+        obternerRecetas
     }
 })
