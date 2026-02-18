@@ -8,7 +8,7 @@ import { useBebidasStore } from '@/stores/bebidas';
     const paginaInicio = computed(() => route.name === 'inicio')
 
     const handleSubmit = () => {
-
+        store.obternerRecetas()
     }
 </script>
 
@@ -41,7 +41,8 @@ import { useBebidasStore } from '@/stores/bebidas';
         
             <form action=""
                 class="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"        
-                v-if="paginaInicio"            
+                v-if="paginaInicio"
+                @submit.prevent="handleSubmit"            
                 >
                 <div class="space-y-4">
                     <label class=" block text-white uppercase font-extrabold text-lg"
